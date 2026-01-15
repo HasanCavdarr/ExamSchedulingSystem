@@ -54,6 +54,16 @@
     <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
       <HintPath>packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
     </Reference>
+    <Reference Include="ExcelDataReader">
+      <HintPath>packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet">
+      <HintPath>packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -66,6 +76,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.4.7.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.Web.DynamicData" />
@@ -162,8 +175,12 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\CourseStudent.cs" />
     <Compile Include="Models\Classroom.cs" />
+    <Compile Include="Models\ClassroomProximity.cs" />
     <Compile Include="Models\LecturerAvailability.cs" />
+    <Compile Include="Models\LecturerAvailabilityBulkCreateViewModel.cs" />
     <Compile Include="Models\ExamSchedule.cs" />
     <Compile Include="Models\ExamRoomAssignment.cs" />
     <Compile Include="Controllers\FacultyController.cs" />
@@ -176,6 +193,8 @@
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Services\ExamSchedulingService.cs" />
     <Compile Include="Services\ExportService.cs" />
+    <Compile Include="Services\ExcelImportService.cs" />
+    <Compile Include="Services\StudentListExcelImportService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
